@@ -1,0 +1,86 @@
+Git Reset
+-----------
+Git reset is used to undo the commited changes, but history will also gets removed
+
+Two important types of git reset are there
+
+1) soft reset
+   soft reset is used to move files from local repo to staging area 
+   + commit history will also gets removed
+
+   syntax: git reset --soft <commit_ID>
+    
+  
+2) Hard reset
+   hard reset will remove file from everywhere ( local repo , staging area & working directory )
+   + commit history will also gets removed
+   
+   syntax: git reset --hard <commit_ID>
+   
+
+
+Git revert
+----------
+Git revert is also used to undo the commited changes, but history will not get removed,
+we can track the reverted changes in the git log
+
+syntax:
+   git revert HEAD
+   
+Note: 
+
+git revert is used to rollback only ( go 1 stop back- previous version of code)  
+   
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Difference between Git Reset & Git Revert
+
+Git reset -- 
+   1. commit history will get removed
+   2. destructive as it will delete that commit, as we cannot see the old commit
+   
+Git revert
+   1. commit history will not get removed
+   2. Non Desrtuctive, git revert will create new commit each time.
+   
+   
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Repository 
+----------
+
+repository ==> folder / location ==> where you can store your files
+
+
+Local Repository
+----------------
+repository which is there in your laptop/server
+
+
+Remote repository
+-----------------
+centralized location where all source code related to project will be kept
+
+remote repo service providers are ==> GitHub , BitBucket , Gitlab
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SSH Key
+-------
+SSH keys are a way to identify trusted computers without involving passwords. 
+ssh keys can be used as alternative to password based authentication.
+
+
+
+command to generate ssh key is 
+  ssh-keygen 
+  ==> press enter for 3 times
+  ==> Two files gets created
+    1. id_rsa     ==> private key (shouldnt be shared with anyone)
+	2. id_rsa.pub ==> public key  (can be shared with anyone)
